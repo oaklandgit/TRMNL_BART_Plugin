@@ -1,5 +1,6 @@
 # from BART's official API as of 8/5/25
 # TO DO: create a script that automatically updates
+# or, better yet, pulls from their Stations API
 
 - keyname: api_key
   name: BART API Key
