@@ -9,7 +9,7 @@ It leverages [BART's Legacy API](https://api.bart.gov/docs/overview). Specifical
 
 The API key is available from BART's site at [https://www.bart.gov/schedules/developers/api](https://www.bart.gov/schedules/developers/api)
 
-Definitely some issues to iron out as I'm getting familiar with the odd quirks of the TRMNL's templating engine.
+Definitely some issues to iron out as I'm getting familiar with the odd quirks of the TRMNL's templating engine. But more importantly is figuring out how to make the departure times accurate, given the way TRMNL pulls and caches its fetches. Stay tuned (or help out!)
 
 
 
