@@ -1,0 +1,35 @@
+<div class="layout gap--xxlarge">
+
+  {% assign station = trmnl.plugin_settings.custom_fields_values.from %}
+
+  {% for etd in root.station[0].etd %}
+
+  {% assign dir_api = etd.estimate[0].direction | downcase %}
+  {% assign dir_setting = trmnl.plugin_settings.custom_fields_values.direction | downcase %}
+  {% assign dir_label = etd.estimate[0].direction | capitalize %}
+
+  {% if dir_api == dir_setting %}
+
+  {% for est in etd.estimate %}
+
+
+  <div>
+    {{etd.estimate[0].length}} car {{etd.destination}} train in
+    <div>
+      <strong>{{est.minutes}} minutes.</strong>
+    </div>
+  </div> 
+
+
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</div>
+
+<div class="title_bar">
+  <img class="image" src="https://usetrmnl.com/images/plugins/trmnl--render.svg" />
+  <span class="title">BART Departures</span>
+  <span class="instance"> {{ station }} {{ dir_label }}bound</span>
+</div>
+
+
