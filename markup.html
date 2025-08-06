@@ -10,18 +10,18 @@
 
   {% if dir_api == dir_setting %}
 
-  {% for est in etd.estimate %}
+    {% for est in etd.estimate %}
 
-
-  <div>
-    {{etd.estimate[0].length}} car {{etd.destination}} train in
     <div>
-      <strong>{{est.minutes}} minutes.</strong>
-    </div>
-  </div> 
+  
+  
+      <span class="value value--xxlarge text--gray-3">{{est.minutes}}<span class="value--small">min</span></span>
+      <span class="label label--inverted">{{etd.destination}}</span>
+      <span class="label label--outline">{{etd.estimate[0].length}}-car train</span>
+    </div> 
 
 
-  {% endfor %}
+    {% endfor %}
   {% endif %}
   {% endfor %}
 </div>
@@ -31,5 +31,4 @@
   <span class="title">BART Departures</span>
   <span class="instance"> {{ station }} {{ dir_label }}bound</span>
 </div>
-
 
